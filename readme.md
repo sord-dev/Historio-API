@@ -12,6 +12,4 @@ Auth
 Fuctional
 
 - Get highest ranked players: GET /leaderboard
-- Get a list of questions and answers: GET /questions
-- Get a random question: GET /questions/random
-- Get a specific question by question id: GET /questions/:id
+- Get a list of questions and answers by type: GET /questions/:type
