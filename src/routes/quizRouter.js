@@ -1,15 +1,17 @@
 const express = require('express');
 const randomChoice = require('../helpers/randomChoice');
+const leaderboardCreator = require('../helpers/leaderboardCreator');
 const choiceQ = require('../config/questions/choice.json');
 const imagesQ = require('../config/questions/images.json');
 const wordsQ = require('../config/questions/words.json');
+const stats = require('../config/stats.json');
 
 
 const quizRouter = express.Router();
 
 // get and calculate leaderboard
 quizRouter.get('/leaderboard', (req, res) => {
-    res.json([{name: 'bob'}, {name: 'dean'}])
+    res.json(leaderboardCreator(stats))
 })
 
 // get all questions by type
