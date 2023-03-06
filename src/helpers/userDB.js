@@ -11,9 +11,11 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
     else {
         console.log("Connected to SQLite database.")
         db.run(`CREATE TABLE users (
-            id INTEGER PRIMARY KEY,
-            username text,
-            password text
+            id INTEGER NOT NULL UNIQUE,
+            username text NOT NULL UNIQUE,
+            password text,
+            statsId INTEGER,
+            PRIMARY KEY(id, username)
         )`,
         (err) => {
             if (err) {
@@ -21,9 +23,9 @@ let db = new sqlite3.Database(DBSOURCE, (err) => {
             }
             else {
                 console.log("Table created")
-                const insert = "INSERT INTO users (id, username, password) VALUES (?, ?, ?)"
+                const insert = "INSERT INTO users (id, username, password, statsId) VALUES (?, ?, ?, ?)"
                 db.run(insert, 
-                    [0001, "test", "t3st"])
+                    [1234567, "admin", "adm1n", 0])
             }
         })
     }
