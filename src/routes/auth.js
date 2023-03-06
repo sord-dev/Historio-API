@@ -3,10 +3,7 @@ const userLogIn = express.Router();
 
 const userDB = require("../helpers/userDB.js");
 md5 = require("md5");
-const bodyParser = require("body-parser");
 
-userLogIn.use(bodyParser.urlencoded({extended: false}));
-userLogIn.use(bodyParser.json());
 
 userLogIn.get('/users', (req, res) => {
     const sql = "SELECT * FROM users"
