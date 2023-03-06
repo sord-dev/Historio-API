@@ -1,7 +1,5 @@
 Historio Questions API
 
-
-
 Auth
 
 Sign in: POST /auth/sign-in
