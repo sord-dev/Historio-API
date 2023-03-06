@@ -12,6 +12,7 @@
   },
   "keywords": [],
   "author": "",
+  "type": "commonjs",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sord-dev/Historio-API/issues"

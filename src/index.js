@@ -7,7 +7,6 @@ const port = 3000;
 
 app.use(cors());
 
-
 app.use('/quiz', quizRouter);
 
 app.listen(port, () => console.log(`listening on port - ${port}`))
