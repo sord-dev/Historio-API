@@ -29,7 +29,7 @@ userLogIn.get("/users", (req, res) => {
 });
 
 
-//get user data if logged in
+//get user data IF logged in
 userLogIn.get("/me", (req, res) => {
   const { body } = req;
 
@@ -41,5 +41,31 @@ userLogIn.get("/me", (req, res) => {
     res.status(403).send({ error: "data not found" });
   }
 });
+
+userLogIn.post("/login", (req, res) => {
+    res.status(200).json({message: 'WORK IN PROGRESS'});
+})
+
+userLogIn.post("/sign-up", (req, res) => {
+    res.status(200).json({message: 'WORK IN PROGRESS'});
+})
+
+
+// post update user data IF logged in
+// userLogIn.post("/me", (req, res) => {
+//     const { body } = req;
+  
+//     const user = users.find((user) => user.username === body.username);
+  
+//     if (user) {
+//         // update user
+    
+//     } else {
+//         // deny request
+     
+//     }
+//   });
+
+
 
 module.exports = userLogIn;
