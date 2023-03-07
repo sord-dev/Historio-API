@@ -1,5 +1,5 @@
 function generateID() {
-  let id = Date.now();
+  const id = Date.now();
   return id;
 }
 
