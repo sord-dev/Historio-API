@@ -33,10 +33,10 @@ userLogIn.post("/login", async (req, res) => {
 
     try {
         if (await bcrypt.compare(req.body.password, user.password)) {
-            res.status(200).send("You're logged in.")
+            res.status(200).send("You're logged in.");
         }
         else {
-            res.status(400).send("Wrong password. Try again.")
+            res.status(400).send("Wrong password. Try again.");
         }
     } catch (error) {
         res.status(417).send(error);
