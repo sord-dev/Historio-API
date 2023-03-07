@@ -16,10 +16,20 @@ class User {
         this.password = await bcrypt.hash(this.password, salt);
     }
 
+    async checkEncryptedPassword(strPassword) {
+        try {
+        const result = await bcrypt.compare(strPassword, this.password)
+        return result
+        } 
+        catch (error) {
+            return "Wrong password."
+        }
+    }
+
     setId (id) {
         this.id = id;
     }
 }
 
 
-module.exports = User
+module.exports = User;
