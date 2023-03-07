@@ -1,7 +1,62 @@
 [
   {
     "questionID": 1,
-    "image": "https://via.placeholder.com/300",
-    "answer": "placeholder"
+    "image": "https://uploads0.wikiart.org/00339/images/leonardo-da-vinci/mona-lisa-c-1503-1519.jpg",
+    "artist": "Leonardo da Vinci",
+    "title": "Mona Lisa"
+  },
+  {
+    "questionID": 2,
+    "image": "http://lh3.googleusercontent.com/Pd2nCUHUz4Ruc76LRh1-H0Dldl04hWSXw8P9uCYZ4TIWP7yNPArIgWlHZrf1qT9T=s1200",
+    "artist": "Vincent van Gogh",
+    "title": "The Starry Night"
+  },
+  {
+    "questionID": 3,
+    "image": "http://lh3.googleusercontent.com/J0sw0IiqP2F4gavYnI-vUa5IBgHiHy42lohgm-qq1vuygUX0HQgylVSV1ZdDTV5XIg=s1200",
+    "artist": "Johannes Vermeer",
+    "title": "Girl With A Pearl"
+  },
+  {
+    "questionID": 4,
+    "image": "http://lh3.googleusercontent.com/XQBr2BcJcZEPUOLp-CmzMH58BcdgPJEYm17IPbPvFvqMQ2zmDmVn7mPvqPvbg_OaYQ=s1200",
+    "artist": "Sandro Botticelli",
+    "title": "The Birth of Venus"
+  },
+  {
+    "questionID": 5,
+    "image": "http://lh3.googleusercontent.com/7aJyS2Nd7c8oCJKmfXlmM-rnSnLMY0ykfBFOP8N3OjV6M4hbhS_NEg8tH6SJDfvl=s1200",
+    "artist": "Gustav Klimt",
+    "title": "The Kiss"
+  },
+  {
+    "questionID": 6,
+    "image": "https://uploads6.wikiart.org/images/salvador-dali/the-persistence-of-memory-1931.jpg",
+    "artist": "Salvador Dali",
+    "title": "The Persistence of Memory"
+  },
+  {
+    "questionID": 7,
+    "image": "http://lh3.googleusercontent.com/3agAzqx7Z4c_wOAZdtRDfpCvv4ingJk9OJ6GJGShqe20N0nbQWWq_L5WHhXWkW8CX_s=s1200",
+    "artist": "Rembrandt van Rijn",
+    "title": "The Night Watch"
+  },
+  {
+    "questionID": 8,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Última_Cena_-_Da_Vinci_5.jpg",
+    "artist": "Leonardo da Vinci",
+    "title": "The Last Supper"
+  },
+  {
+    "questionID": 9,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/0d/La_velada%2C_por_Rafael.jpg",
+    "artist": "Raphael",
+    "title": "La velata"
+  },
+  {
+    "questionID": 10,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/WLA_metmuseum_Water_Lilies_by_Claude_Monet.jpg",
+    "artist": "Claude Monet",
+    "title": "Water Lilies"
   }
 ]
