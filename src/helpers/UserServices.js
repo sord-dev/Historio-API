@@ -1,6 +1,7 @@
 // This is an example of how we could extract some of the api functions on Thursday.
 
 const users = require("../config/users.json");
+const stats = require("../config/stats.json");
 
 // function getUsers() {
 //     return arrUsers;
@@ -16,4 +17,4 @@ function getUser(username) {
 
 // // generate maxId...
 
-module.exports = { users, getUser }
+module.exports = { users, getUser, stats }

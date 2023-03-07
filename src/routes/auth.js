@@ -1,8 +1,11 @@
 const User = require("../models/User.js");
 const express = require("express");
 const bcrypt = require("bcrypt");
-const { users, getUser } = require("../helpers/UserServices.js");
+const { users, stats, getUser } = require("../helpers/UserServices.js");
+const Stat = require("../models/Stat.js");
+
 let maxId = users.length; // getting users length to create unique Id.
+let maxStatsId = stats.length; // getting users length to create unique Id.
 
 // /quiz/{endpoint}
 const userLogIn = express.Router();
@@ -44,7 +47,8 @@ userLogIn.post("/login", async (req, res) => {
 
 userLogIn.post("/sign-up", async (req, res) => {
   try {
-    let user = new User(req.body.username, req.body.password, req.body.statsID);
+    let user = new User(req.body.username, req.body.password);
+    let userStats = new Stat();
 
     // Check for requirement violations.
     let violations = calculateValidationErrors(user);
@@ -54,7 +58,7 @@ userLogIn.post("/sign-up", async (req, res) => {
 
     // Extract user creation into a new functiton.
     // Creating user.
-    await addUser(user);
+    await addUser(user, userStats);
 
     return res.status(200).json({ userId: user.id, message: "Success." });
   } catch {
@@ -62,11 +66,16 @@ userLogIn.post("/sign-up", async (req, res) => {
   }
 });
 
-async function addUser(user) {
+async function addUser(user, userStats) {
   maxId++;
+  maxStatsId++;
+
   await user.encryptPassword(user.password);
   user.setId(maxId);
+  user.setStatsId(maxStatsId)
+  userStats.setId(maxStatsId)
   users.push(user);
+  stats.push(userStats);
 }
 
 function calculateValidationErrors(user) {

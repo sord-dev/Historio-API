@@ -4,11 +4,11 @@ const bcrypt = require("bcrypt");
 // Creating a class to model user. This class has a method to encrypt the user password. 
 class User {
 
-    constructor (username, password, statsId) {
+    constructor (username, password) {
        this.id = undefined;
        this.username = username;
        this.password = password;
-       this.statsId = statsId;
+       this.statsID = undefined;
     }
    
     async encryptPassword() {
@@ -18,6 +18,10 @@ class User {
 
     setId (id) {
         this.id = id;
+    }
+
+    setStatsId (id) {
+        this.statsID = id;
     }
 }
 
