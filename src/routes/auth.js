@@ -1,7 +1,12 @@
 const User = require("../models/User.js");
 const express = require("express");
 const bcrypt = require("bcrypt");
-const { users, stats, getUser } = require("../helpers/UserServices.js");
+const {
+  users,
+  stats,
+  getUser,
+  getUserDataByStatID,
+} = require("../helpers/UserServices.js");
 const Stat = require("../models/Stat.js");
 
 let maxId = users.length; // getting users length to create unique Id.
@@ -15,14 +20,19 @@ userLogIn.get("/users", (req, res) => {
   res.status(200).json(users);
 });
 
-//get user data IF logged in - BROKEN CANNOT FIND VIA AUTH HEADERS?
+//get user data IF logged in
 userLogIn.get("/me", (req, res) => {
   const { headers } = req;
 
-  const user = getUser(headers.authorization);
+  const { user, stat } = getUserDataByStatID(headers.authorization);
 
-  if (user) {
-    res.status(200).json(user);
+  const response = {
+    username: user.username,
+    stats: stat,
+  };
+
+  if (response.username) {
+    res.status(200).json(response);
   } else {
     res.status(404).send({ error: "User not found." });
   }
@@ -36,7 +46,7 @@ userLogIn.post("/login", async (req, res) => {
 
   try {
     if (await bcrypt.compare(req.body.password, user.password)) {
-      res.status(200).json({ message: "You're logged in." });
+      res.status(200).json({ ...user, password: null });
     } else {
       res.status(400).json({ message: "Wrong password. Try again." });
     }
@@ -72,8 +82,8 @@ async function addUser(user, userStats) {
 
   await user.encryptPassword(user.password);
   user.setId(maxId);
-  user.setStatsId(maxStatsId)
-  userStats.setId(maxStatsId)
+  user.setStatsId(maxStatsId);
+  userStats.setId(maxStatsId);
   users.push(user);
   stats.push(userStats);
 }

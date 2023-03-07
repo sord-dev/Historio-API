@@ -8,7 +8,18 @@ const stats = require("../config/stats.json");
 // }
 
 function getUser(username) {
-    return users.find(user => user.username == username);
+  return users.find((user) => user.username == username);
+}
+
+function getUserDataByStatID(statsID) {
+  const user = users.find(
+    (user) => user.statsID === Number(statsID)
+  );
+  const stat = stats.find(
+    (stat) => stat.statsID === Number(statsID)
+  );
+
+  return { user, stat };
 }
 
 // function addUser(user) {
@@ -17,4 +28,4 @@ function getUser(username) {
 
 // // generate maxId...
 
-module.exports = { users, getUser, stats }
+module.exports = { users, getUser, stats, getUserDataByStatID };
