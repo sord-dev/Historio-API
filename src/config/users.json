@@ -1,0 +1,14 @@
+[
+  {
+    "id": 413289342,
+    "username": "test_user99",
+    "password": "$2b$10$VRTU9NYxUwcvsdQZew5OEOK2qFz2aP6XPGxaLWToSglM192Ejw/G6",
+    "statsID": 1
+  },
+  {
+    "id": 32431245,
+    "username": "anthr_test_user99",
+    "password": "$2b$10$jJc9CqAbyWwOvjSh9Zd/TeZbzaCXrp2sGfez3NIs5bYqSP8H7IMfW",
+    "statsID": 2
+  }
+]
