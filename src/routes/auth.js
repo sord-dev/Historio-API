@@ -24,17 +24,18 @@ userLogIn.get("/users", (req, res) => {
 userLogIn.get("/me", (req, res) => {
   const { headers } = req;
 
-  const { user, stat } = getUserDataByStatID(headers.authorization);
+  const stat = stats.find((stat) => stat.statsID == headers.authorization);
+  const user = users.find((stat) => stat.statsID == headers.authorization);
 
-  const response = {
-    username: user.username,
-    stats: stat,
-  };
-
-  if (response.username) {
-    res.status(200).json(response);
-  } else {
+  if (!stat || !user) {
     res.status(404).send({ error: "User not found." });
+  } else {
+    const response = {
+      username: user.username,
+      stats: stat,
+    };
+
+    res.status(200).json(response);
   }
 });
 
