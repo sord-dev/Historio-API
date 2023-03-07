@@ -10,5 +10,11 @@
     "username": "anthr_test_user99",
     "password": "$2b$10$jJc9CqAbyWwOvjSh9Zd/TeZbzaCXrp2sGfez3NIs5bYqSP8H7IMfW",
     "statsID": 2
-  }
+  },
+  {
+    "id": 3,
+    "username": "totally_not_a_test11",
+    "password": "$2b$10$LIHHC3hZy0KEbXyYWZVjZu3ZS3qdscpA9xetLe.4uLpMrbcCQydje",
+    "statsID": 3
+}
 ]
