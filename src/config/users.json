@@ -2,18 +2,21 @@
   {
     "id": 413289342,
     "username": "test_user99",
+    "thumbnail": "https://source.boringavatars.com",
     "password": "$2b$10$VRTU9NYxUwcvsdQZew5OEOK2qFz2aP6XPGxaLWToSglM192Ejw/G6",
     "statsID": 1
   },
   {
     "id": 32431245,
     "username": "anthr_test_user99",
+    "thumbnail": "https://source.boringavatars.com",
     "password": "$2b$10$jJc9CqAbyWwOvjSh9Zd/TeZbzaCXrp2sGfez3NIs5bYqSP8H7IMfW",
     "statsID": 2
   },
   {
     "id": 3,
     "username": "totally_not_a_test11",
+    "thumbnail": "https://source.boringavatars.com",
     "password": "$2b$10$LIHHC3hZy0KEbXyYWZVjZu3ZS3qdscpA9xetLe.4uLpMrbcCQydje",
     "statsID": 3
 }

@@ -5,7 +5,6 @@ const {
   users,
   stats,
   getUser,
-  getUserDataByStatID,
 } = require("../helpers/UserServices.js");
 const Stat = require("../models/Stat.js");
 
