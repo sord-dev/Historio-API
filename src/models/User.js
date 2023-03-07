@@ -2,7 +2,7 @@ const bcrypt = require("bcrypt");
 
 
 // Creating a class to model user. This class has a method to encrypt the user password. 
-module.exports = class User {
+class User {
 
     constructor (username, password, statsId) {
        this.id = undefined;
@@ -20,3 +20,6 @@ module.exports = class User {
         this.id = id;
     }
 }
+
+
+module.exports = User
