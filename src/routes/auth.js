@@ -27,8 +27,8 @@ userLogIn.get("/me", (req, res) => {
     }
 });
 
-//get user data IF logged in
-userLogIn.patch("/me/win", (req, res) => {
+// Increase user XP on correct answer, respond with updated XP.
+userLogIn.patch("/me", (req, res) => {
   const { body } = req;
 
   const user = getUser(body.username);
