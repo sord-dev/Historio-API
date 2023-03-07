@@ -1,7 +1,40 @@
 [
-    {
-      "questionID": 1,
-      "hint": "An atrocity that occoured in 1945",
-      "answer": "placeholder"
-    }
-  ]
+  {
+    "questionID": 1,
+    "hint": "An atrocity that occurred in 1945",
+    "answer": "Hiroshima"
+  },
+  {
+    "questionID": 2,
+    "hint": "A major battle of the American Civil War",
+    "answer": "Gettysburg"
+  },
+  {
+    "questionID": 3,
+    "hint": "An ancient wonder of the world",
+    "answer": "Pyramids"
+  },
+  {
+    "questionID": 4,
+    "hint": "A famous ancient Greek philosopher",
+    "answer": "Socrates"
+  },
+  { "questionID": 5, "hint": "The capital of France", "answer": "Paris" },
+  { "questionID": 6, "hint": "A famous American inventor", "answer": "Edison" },
+  {
+    "questionID": 7,
+    "hint": "A country that was divided into North and South after World War II",
+    "answer": "Korea"
+  },
+  {
+    "questionID": 8,
+    "hint": "The name of the first man to walk on the moon",
+    "answer": "Armstrong"
+  },
+  {
+    "questionID": 9,
+    "hint": "The last queen of France",
+    "answer": "Antoinette"
+  },
+  { "questionID": 10, "hint": "The first emperor of Rome", "answer": "Caesar" }
+]
