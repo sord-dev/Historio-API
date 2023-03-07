@@ -28,18 +28,18 @@ userLogIn.get("/me", (req, res) => {
 userLogIn.post("/login", async (req, res) => {
     const user = getUser(req.body.username);
     if (!user) {
-        return res.status(404).send("User not found.");
+        return res.status(404).json({ message: "User not found." });
     }
 
     try {
         if (await bcrypt.compare(req.body.password, user.password)) {
-            res.status(200).send("You're logged in.");
+            res.status(200).json({ message: "You're logged in." });
         }
         else {
-            res.status(400).send("Wrong password. Try again.");
+            res.status(400).json({ message: "Wrong password. Try again." });
         }
     } catch (error) {
-        res.status(417).send(error);
+        res.status(417).json({ message: error });
     }
 });
 
@@ -62,7 +62,7 @@ userLogIn.post("/sign-up", async (req, res) => {
         // Creating user.
         await addUser(user);
 
-        return res.status(200).json({ userId: user.id, message: 'Success.'});
+        return res.status(200).json({ userId: user.id, message: "Success."});
     }
     catch {
         res.status(500).json({message: "An error has occured."});
@@ -80,11 +80,11 @@ function calculateValidationErrors(user) {
     let arrayOfViolations = []
 
     if (getUser(user.username) != undefined) {
-        arrayOfViolations.push('User already exists');
+        arrayOfViolations.push("User already exists.");
     }
 
     if (user.password.length < 5) {
-        arrayOfViolations.push('Password too short, minimum 5 characters.');
+        arrayOfViolations.push("Password too short, minimum 5 characters.");
     }
    
     return arrayOfViolations; // this function returns a list of violations of the requirements we previously set for username and password.
