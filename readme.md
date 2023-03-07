@@ -11,3 +11,4 @@
 
 - Get highest ranked players: GET /quiz/leaderboard
 - Get a list of questions and answers by type: GET /quiz/questions/:type
+- Get a random question and answer by type: GET /quiz/questions/random/:type
