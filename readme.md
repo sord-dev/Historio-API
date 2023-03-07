@@ -1,17 +1,13 @@
 # Historio Questions API
 
----
+**Auth**
 
-Auth
-
-- Sign in: POST /auth/sign-in
+- Sign in: POST /auth/login
 - Sign up: POST /auth/sign-up
 - Get account details: GET /auth/me
 - Update Account: POST /auth/me
 
-Fuctional
+**Functional**
 
-- Get highest ranked players: GET /leaderboard
-- Get a list of questions and answers: GET /questions
-- Get a random question: GET /questions/random
-- Get a specific question by question id: GET /questions/:id
+- Get highest ranked players: GET /quiz/leaderboard
+- Get a list of questions and answers by type: GET /quiz/questions/:type
