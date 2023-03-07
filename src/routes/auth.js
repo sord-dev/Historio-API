@@ -1,6 +1,6 @@
 const User = require("../models/User.js");
 const express = require("express");
-const users = require("../config/users.json");
+const { users, getUser } = require("../helpers/UserServices.js");
 let maxId = users.length; // getting users length to create unique Id.
 
 // /quiz/{endpoint}
@@ -73,10 +73,6 @@ function calculateValidationErrors(user) {
     }
    
     return arrayOfViolations; // this function returns a list of violations of the requirements we previously set for username and password.
-}
-
-function getUser(username) {
-    return users.find(user => user.username == username);
 }
 
 
