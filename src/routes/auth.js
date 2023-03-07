@@ -14,9 +14,9 @@ userLogIn.get("/users", (req, res) => {
 
 //get user data IF logged in
 userLogIn.get("/me", (req, res) => {
-  const { body } = req;
-
-  const user = getUser(body.username);
+    const { headers } = req;
+    
+    const user = getUser(headers.authorization);
 
   if (user) {
     res.status(200).json(user);
