@@ -1,11 +1,10 @@
 const express = require('express');
-
 const choiceQ = require('../config/questions/choice.json');
 const imagesQ = require('../config/questions/images.json');
 const wordsQ = require('../config/questions/words.json');
+const stats = require('../config/stats.json');
 
 const users = require('../config/users.json');
-const stats = require('../config/stats.json');
 
 const randomChoice = require('../helpers/randomChoice');
 const mapUsersToStats = require('../helpers/mapUsersToStats');
