@@ -1,6 +1,7 @@
 const User = require("../models/User.js");
 const express = require("express");
 const bcrypt = require("bcrypt");
+const updateXP = require("../helpers/updateXP")
 const { users, getUser } = require("../helpers/UserServices.js");
 let maxId = users.length; // getting users length to create unique Id.
 
@@ -12,14 +13,28 @@ userLogIn.get("/users", (req, res) => {
   res.status(200).json(users);
 });
 
+
 //get user data IF logged in
 userLogIn.get("/me", (req, res) => {
+    const { body } = req;
+    
+    const user = getUser(body.username);
+    
+    if (user) {
+        res.status(200).json(user);
+    } else {
+        res.status(404).send({ error: "User not found." });
+    }
+});
+
+//get user data IF logged in
+userLogIn.patch("/me/win", (req, res) => {
   const { body } = req;
 
   const user = getUser(body.username);
 
   if (user) {
-    res.status(200).json(user);
+    res.status(200).json(updateXP(user.statsID));
   } else {
     res.status(404).send({ error: "User not found." });
   }
