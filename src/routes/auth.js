@@ -1,5 +1,6 @@
 const User = require("../models/User.js");
 const express = require("express");
+const bcrypt = require("bcrypt");
 const { users, getUser } = require("../helpers/UserServices.js");
 let maxId = users.length; // getting users length to create unique Id.
 
@@ -24,8 +25,22 @@ userLogIn.get("/me", (req, res) => {
   }
 });
 
-userLogIn.post("/login", (req, res) => {
-    res.status(200).json({message: 'WORK IN PROGRESS'});
+userLogIn.post("/login", async (req, res) => {
+    const user = getUser(req.body.username);
+    if (!user) {
+        return res.status(404).send("User not found.");
+    }
+
+    try {
+        if (await bcrypt.compare(req.body.password, user.password)) {
+            res.status(200).send("You're logged in.");
+        }
+        else {
+            res.status(400).send("Wrong password. Try again.");
+        }
+    } catch (error) {
+        res.status(417).send(error);
+    }
 });
 
 userLogIn.post("/sign-up", async (req, res) => {
