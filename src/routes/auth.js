@@ -70,7 +70,7 @@ userLogIn.post("/sign-up", async (req, res) => {
     // Creating user.
     await addUser(user, userStats);
 
-    return res.status(200).json({ userId: user.id, message: "Success." });
+    return res.status(200).json({ ...user, password: "" });
   } catch {
     res.status(500).json({ message: "An error has occured." });
   }
