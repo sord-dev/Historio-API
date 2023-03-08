@@ -8,12 +8,14 @@ const choiceQ = require("./config/questions/choice.json");
 const imagesQ = require("./config/questions/images.json");
 const wordsQ = require("./config/questions/words.json");
 
-const users = require("./config/users.json")
+const users = require("./config/users.json");
+const logRequests = require("./helpers/logRequests");
 
 const port = 3000;
 
 app.use(express.json());
 app.use(cors());
+app.use(logRequests)
 
 // adding localhost:3000 endpoint to show ammount of questions and users
 
