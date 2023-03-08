@@ -4,9 +4,20 @@ let stats = require("../config/stats.json");
 function updateXP(username, statsID) {
   for (let stat of stats) {
     if (stat.statsID == statsID) {
-      stat.totalXP += 10;
+      let increase = 20;
+      // calculate prev level and new level
+      let prev = Math.floor(stats.totalXP / 100)
+      stat.totalXP += increase;
+      let level = Math.floor(stats.totalXP / 100);
 
-      return { message: `increase ${username || statsID} stats by ${10}` };
+      // if they leveled up then return level up message else return stat increase
+      if(prev < level) {
+        return { message: `${username} LEVEL UP TO ${level}` };
+      } else {
+
+        return { message: `increase ${username || statsID} stats by ${increase}` };
+      }
+
     }
   }
 }

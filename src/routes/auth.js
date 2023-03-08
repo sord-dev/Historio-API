@@ -43,7 +43,7 @@ userLogIn.patch("/me", (req, res) => {
 
   if (user) {
     const response = updateXP(user.username, user.statsID);
-    res.status(200).json({ increase: response });
+    res.status(200).json(response);
   } else {
     res.status(404).send({ error: "User not found." });
   }
