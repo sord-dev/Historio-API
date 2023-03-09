@@ -1,27 +1,24 @@
-const User = require("../models/User.js");
 const express = require("express");
 const bcrypt = require("bcrypt");
-const updateXP = require("../helpers/updateXP");
-const { users, stats, getUser } = require("../helpers/UserServices.js");
-const Stat = require("../models/Stat.js");
 
-let maxId = users.length; // getting users length to create unique Id.
-let maxStatsId = stats.length; // getting users length to create unique Id.
+const {
+  getUser,
+  getUserDataByStatID,
+  addUser,
+  updateUserXP
+} = require("../helpers/UserServices.js");
+
+const User = require("../models/User.js");
+const Stat = require("../models/Stat.js");
 
 // /quiz/{endpoint}
 const userLogIn = express.Router();
-
-// get all users FOR TESTING
-userLogIn.get("/users", (req, res) => {
-  res.status(200).json(users);
-});
 
 //get user data IF logged in
 userLogIn.get("/me", (req, res) => {
   const { headers } = req;
 
-  const stat = stats.find((stat) => stat.statsID == headers.authorization);
-  const user = users.find((stat) => stat.statsID == headers.authorization);
+  const { stat, user } = getUserDataByStatID(headers.authorization);
 
   if (!stat || !user) {
     res.status(404).send({ error: "User not found." });
@@ -42,7 +39,7 @@ userLogIn.patch("/me", (req, res) => {
   const user = getUser(body.username);
 
   if (user) {
-    const response = updateXP(user.username, user.statsID);
+    const response = updateUserXP(user.username, user.statsID);
     res.status(200).json(response);
   } else {
     res.status(404).send({ error: "User not found." });
@@ -86,18 +83,6 @@ userLogIn.post("/sign-up", async (req, res) => {
     res.status(500).json({ message: "An error has occured." });
   }
 });
-
-async function addUser(user, userStats) {
-  maxId++;
-  maxStatsId++;
-
-  await user.encryptPassword(user.password);
-  user.setId(maxId);
-  user.setStatsId(maxStatsId);
-  userStats.setId(maxStatsId);
-  users.push(user);
-  stats.push(userStats);
-}
 
 function calculateValidationErrors(user) {
   let arrayOfViolations = [];
