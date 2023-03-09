@@ -3,5 +3,4 @@ function randomChoice(arr) {
     return arr[index];
 }
 
-
 module.exports = randomChoice
