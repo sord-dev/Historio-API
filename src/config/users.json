@@ -19,5 +19,12 @@
     "thumbnail": "https://source.boringavatars.com",
     "password": "$2b$10$LIHHC3hZy0KEbXyYWZVjZu3ZS3qdscpA9xetLe.4uLpMrbcCQydje",
     "statsID": 3
-}
+  },
+  {
+    "id": 4,
+    "username": "vitali",
+    "thumbnail": "https://source.boringavatars.com",
+    "password": "$2b$10$GU0qxbxYunNjN6WaFEo1P.n2rvWApCwnZnrRrFMt4SH0J83n9N6Hi",
+    "statsID": 4
+  }
 ]
