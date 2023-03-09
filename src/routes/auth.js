@@ -5,9 +5,8 @@ const {
   getUser,
   getUserDataByStatID,
   addUser,
+  updateUserXP
 } = require("../helpers/UserServices.js");
-const updateXP = require("../helpers/updateXP");
-
 
 const User = require("../models/User.js");
 const Stat = require("../models/Stat.js");
@@ -40,7 +39,7 @@ userLogIn.patch("/me", (req, res) => {
   const user = getUser(body.username);
 
   if (user) {
-    const response = updateXP(user.username, user.statsID);
+    const response = updateUserXP(user.username, user.statsID);
     res.status(200).json(response);
   } else {
     res.status(404).send({ error: "User not found." });

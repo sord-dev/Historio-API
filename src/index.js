@@ -4,18 +4,16 @@ const quizRouter = require("./routes/quizRouter");
 const userLogIn = require("./routes/auth.js");
 const app = express();
 
-const choiceQ = require("./config/questions/choice.json");
-const imagesQ = require("./config/questions/images.json");
-const wordsQ = require("./config/questions/words.json");
+const { choiceQ, imagesQ, wordsQ } = require("./helpers/QuizServices.js");
+const { users } = require("./helpers/UserServices.js");
 
-const users = require("./config/users.json");
 const logRequests = require("./helpers/logRequests");
 
 const port = 3000;
 
 app.use(express.json());
 app.use(cors());
-app.use(logRequests)
+app.use(logRequests);
 
 // adding localhost:3000 endpoint to show ammount of questions and users
 
