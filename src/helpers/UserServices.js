@@ -80,7 +80,6 @@ function updateUserXP(username, statsID) {
 module.exports = {
   users,
   getUser,
-  stats,
   getUserDataByStatID,
   addUser,
   mapUsersToStats,

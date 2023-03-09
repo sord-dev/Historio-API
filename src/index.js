@@ -1,8 +1,10 @@
 const express = require("express");
 const cors = require("cors");
+
+const app = express();
+
 const quizRouter = require("./routes/quizRouter");
 const userLogIn = require("./routes/auth.js");
-const app = express();
 
 const { choiceQ, imagesQ, wordsQ } = require("./helpers/QuizServices.js");
 const { users } = require("./helpers/UserServices.js");
