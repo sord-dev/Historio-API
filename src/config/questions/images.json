@@ -15,7 +15,7 @@
     "questionID": 3,
     "image": "http://lh3.googleusercontent.com/J0sw0IiqP2F4gavYnI-vUa5IBgHiHy42lohgm-qq1vuygUX0HQgylVSV1ZdDTV5XIg=s1200",
     "artist": "Johannes Vermeer",
-    "title": "Girl With A Pearl"
+    "title": "Girl With A Pearl Earring"
   },
   {
     "questionID": 4,
@@ -58,5 +58,47 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/WLA_metmuseum_Water_Lilies_by_Claude_Monet.jpg",
     "artist": "Claude Monet",
     "title": "Water Lilies"
+  },
+  {
+    "questionID": 11,
+    "image": "https://uploads2.wikiart.org/images/edvard-munch/the-scream-1893(2).jpg!Large.jpg",
+    "artist": "Edvard Munch",
+    "title": "The Scream"
+  },
+  {
+    "questionID": 12,
+    "image": "https://uploads0.wikiart.org/00139/images/pablo-picasso/guernica-by-pablo-picasso.jpg!Large.jpg",
+    "artist": "Pablo Picasso",
+    "title": "Guernica"
+  },
+  {
+    "questionID": 13,
+    "image": "https://uploads5.wikiart.org/images/edvard-munch/anxiety-1894.jpg!Large.jpg",
+    "artist": "Edvard Munch",
+    "title": "Anxiety"
+  },
+  {
+    "questionID": 14,
+    "image": "https://uploads5.wikiart.org/00129/images/piet-mondrian/broadway-boogie-woogie.jpg!Large.jpg",
+    "artist": "Piet Mondrian",
+    "title": "Broadway Boogie Woogie"
+  },
+  {
+    "questionID": 15,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hokusai_1760-1849_Ocean_waves.jpg/1600px-Hokusai_1760-1849_Ocean_waves.jpg",
+    "artist": "Hokusai",
+    "title": "Choshi in Shimosha"
+  },
+  {
+    "questionID": 16,
+    "image": "https://media.timeout.com/images/105222673/1920/1440/image.jpg",
+    "artist": "Pieter Bruegel the Elder",
+    "title": "The Harvesters"
+  },
+  {
+    "questionID": 17,
+    "image": "https://cdn.shopify.com/s/files/1/1771/4067/files/Lady_with_an_Ermine_by_Leonardo_da_Vinci_large.jpg?v=1571688129",
+    "artist": "Leonardo da Vinci",
+    "title": "Lady with an Ermine"
   }
 ]
