@@ -3,29 +3,30 @@
 const users = require("../config/users.json");
 const stats = require("../config/stats.json");
 
-// function getUsers() {
-//     return arrUsers;
-// }
+let maxId = users.length; // getting users length to create unique Id.
+let maxStatsId = stats.length; // getting users length to create unique Id.
 
 function getUser(username) {
   return users.find((user) => user.username == username);
 }
 
 function getUserDataByStatID(statsID) {
-  const user = users.find(
-    (user) => user.statsID === Number(statsID)
-  );
-  const stat = stats.find(
-    (stat) => stat.statsID === Number(statsID)
-  );
+  const user = users.find((user) => user.statsID === Number(statsID));
+  const stat = stats.find((stat) => stat.statsID === Number(statsID));
 
   return { user, stat };
 }
 
-// function addUser(user) {
-//     arrUsers.push(user);
-// }
+async function addUser(user, userStats) {
+  maxId++;
+  maxStatsId++;
 
-// // generate maxId...
+  await user.encryptPassword(user.password);
+  user.setId(maxId);
+  user.setStatsId(maxStatsId);
+  userStats.setId(maxStatsId);
+  users.push(user);
+  stats.push(userStats);
+}
 
-module.exports = { users, getUser, stats, getUserDataByStatID };
+module.exports = { users, getUser, stats, getUserDataByStatID, addUser };
