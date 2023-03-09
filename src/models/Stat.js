@@ -1,6 +1,7 @@
 class Stat {
   constructor() {
-    (this.statsID = null), (this.totalXP = 0);
+    this.statsID = null; 
+    this.totalXP = 0;
   }
 
   setId(id) {
