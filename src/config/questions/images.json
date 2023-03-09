@@ -15,7 +15,7 @@
     "questionID": 3,
     "image": "http://lh3.googleusercontent.com/J0sw0IiqP2F4gavYnI-vUa5IBgHiHy42lohgm-qq1vuygUX0HQgylVSV1ZdDTV5XIg=s1200",
     "artist": "Johannes Vermeer",
-    "title": "Girl With A Pearl"
+    "title": "Girl With A Pearl Earring"
   },
   {
     "questionID": 4,
@@ -58,5 +58,125 @@
     "image": "https://upload.wikimedia.org/wikipedia/commons/9/9e/WLA_metmuseum_Water_Lilies_by_Claude_Monet.jpg",
     "artist": "Claude Monet",
     "title": "Water Lilies"
+  },
+  {
+    "questionID": 11,
+    "image": "https://uploads2.wikiart.org/images/edvard-munch/the-scream-1893(2).jpg!Large.jpg",
+    "artist": "Edvard Munch",
+    "title": "The Scream"
+  },
+  {
+    "questionID": 12,
+    "image": "https://uploads0.wikiart.org/00139/images/pablo-picasso/guernica-by-pablo-picasso.jpg!Large.jpg",
+    "artist": "Pablo Picasso",
+    "title": "Guernica"
+  },
+  {
+    "questionID": 13,
+    "image": "https://uploads5.wikiart.org/images/edvard-munch/anxiety-1894.jpg!Large.jpg",
+    "artist": "Edvard Munch",
+    "title": "Anxiety"
+  },
+  {
+    "questionID": 14,
+    "image": "https://uploads5.wikiart.org/00129/images/piet-mondrian/broadway-boogie-woogie.jpg!Large.jpg",
+    "artist": "Piet Mondrian",
+    "title": "Broadway Boogie Woogie"
+  },
+  {
+    "questionID": 15,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Hokusai_1760-1849_Ocean_waves.jpg/1600px-Hokusai_1760-1849_Ocean_waves.jpg",
+    "artist": "Katsushika Hokusai",
+    "title": "Choshi in Shimosha"
+  },
+  {
+    "questionID": 16,
+    "image": "https://media.timeout.com/images/105222673/1920/1440/image.jpg",
+    "artist": "Pieter Bruegel the Elder",
+    "title": "The Harvesters"
+  },
+  {
+    "questionID": 17,
+    "image": "https://cdn.shopify.com/s/files/1/1771/4067/files/Lady_with_an_Ermine_by_Leonardo_da_Vinci_large.jpg?v=1571688129",
+    "artist": "Leonardo da Vinci",
+    "title": "Lady with an Ermine"
+  },
+  {
+    "questionID": 18,
+    "image": "https://www.artic.edu/iiif/2/2d484387-2509-5e8e-2c43-22f9981972eb/full/1686,/0/default.jpg",
+    "artist": "Georges Seurat",
+    "title": "A SUnday on La Grande Jatte"
+  },
+  {
+    "questionID": 19,
+    "image": "https://www.artic.edu/iiif/2/f9932dea-7999-ea96-fcab-965e027051c2/full/843,/0/default.jpg",
+    "artist": "Jackson Pollock",
+    "title": "Greyed Rainbow"
+  },
+  {
+    "questionID": 20,
+    "image": "https://www.artic.edu/iiif/2/26d3cea8-44c0-bfbd-a91a-19a007517152/full/1686,/0/default.jpg",
+    "artist": "Vincent van Gogh",
+    "title": "Self Portrait"
+  },
+  {
+    "questionID": 21,
+    "image": "https://www.artic.edu/iiif/2/b272df73-a965-ac37-4172-be4e99483637/full/843,/0/default.jpg",
+    "artist": "Grant Wood",
+    "title": "American Gothic"
+  },
+  {
+    "questionID": 22,
+    "image": "https://www.artic.edu/iiif/2/ddacae05-9279-51b5-e9ab-00024ae01e27/full/843,/0/default.jpg",
+    "artist": "Pablo Picasso",
+    "title": "The Old Guitarist"
+  },
+  {
+    "questionID": 23,
+    "image": "https://www.artic.edu/iiif/2/25c31d8d-21a4-9ea1-1d73-6a2eca4dda7e/full/1686,/0/default.jpg",
+    "artist": "Vincent van Gogh",
+    "title": "The Bedroom"
+  },
+  {
+    "questionID": 24,
+    "image": "https://cdn.shopify.com/s/files/1/1771/4067/files/Lady_with_an_Ermine_by_Leonardo_da_Vinci_large.jpg?v=1571688129",
+    "artist": "Leonardo da Vinci",
+    "title": "Lady with an Ermine"
+  },
+  {
+    "questionID": 25,
+    "image": "https://www.artic.edu/iiif/2/fd991fea-0c13-8444-7879-aba467f1d9db/full/1686,/0/default.jpg",
+    "artist": "Edouard Manet",
+    "title": "Woman Reading"
+  },
+  {
+    "questionID": 26,
+    "image": "https://www.artic.edu/iiif/2/4d152c81-8389-e426-e5f2-e98902d2515a/full/843,/0/default.jpg",
+    "artist": "Mark Rothko",
+    "title": "Untitled (Purple, White, and Red)"
+  },
+  {
+    "questionID": 27,
+    "image": "https://www.artic.edu/iiif/2/d7df2633-3b40-f570-c906-211503a37cde/full/1686,/0/default.jpg",
+    "artist": "Edvard Munch",
+    "title": "The Girl by the Window"
+  },
+  {
+    "questionID": 28,
+    "image": "https://www.artic.edu/iiif/2/362c0c2a-4576-2207-4ba9-2b87e6d0bad0/full/843,/0/default.jpg",
+    "artist": "Andy Warhol",
+    "title": "Liz #3 [Early Colored Liz]"
+  },
+  {
+    "questionID": 29,
+    "image": "https://www.artic.edu/iiif/2/1fb77da1-e868-0bc2-eb9f-126a38ed4bd5/full/843,/0/default.jpg",
+    "artist": "Henri Matisse",
+    "title": "Still Life with Geranium"
+  },
+  {
+    "questionID": 30,
+    "image": "https://www.artic.edu/iiif/2/77245c86-908f-83a8-4a17-119633f80a5e/full/843,/0/default.jpg",
+    "artist": "Arshile Gorky",
+    "title": "The Plough and the Song"
   }
 ]
